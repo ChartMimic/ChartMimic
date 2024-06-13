@@ -46,7 +46,6 @@ class Cogvlm2:
 
 
     def generate(self, conversation):
-        # import pdb; pdb.set_trace()
         query = conversation[0]['content'][0]['text'].replace("the image below.", "the image above.")
         image = Image.open(conversation[0]['content'][1]['image_url']).convert('RGB')
         input_by_model = self.model.build_conversation_input_ids(self.tokenizer,
@@ -74,8 +73,6 @@ class Cogvlm2:
             print("Llava only supports 1-turn conversation")
             raise NotImplementedError
         for message in conversation:
-            # import pdb; pdb.set_trace()
-            # message_tmp = {}
             for content in message["content"]:
                 if content["type"] == "text":
                     converted_conversation.append({

@@ -1,6 +1,4 @@
 import os
-os.environ['https_proxy'] = "http://127.0.0.1:7890"
-os.environ['http_proxy'] = "http://127.0.0.1:7890"
 import requests
 import json
 import time
@@ -35,36 +33,6 @@ class Claude:
 
 
     def generate(self, conversation):
-        conversation = self._convert_conversation(conversation)
-        for _ in range(self.max_retry_iters):
-            try:
-                Baseurl = "https://api.claude-Plus.top"
-                Skey = "sk-GQicAWC2Qdbacnhy62F369066aE748259d452cE5De5b9488"
-                payload = json.dumps({
-                    "model": self.engine,
-                    "messages": conversation,
-                })
-                url = Baseurl + "/v1/chat/completions"
-                headers = {
-                    'Accept': 'application/json',
-                    'Authorization': f'Bearer {Skey}',
-                    'User-Agent': 'Apifox/1.0.0 (https://apifox.com)',
-                    'Content-Type': 'application/json'
-                }
-                response = requests.request("POST", url, headers=headers, data=payload)
-                # import pdb; pdb.set_trace()
-                response = response.json()
-            except Exception as e:
-                # import pdb; pdb.set_trace()
-                time.sleep(self.retry_delays)
-                print(str(e))
-                # response = ""
-                # break
-            if "error" in str(response):
-                print(response)
-                time.sleep(self.retry_delays)
-                continue
-            return response
         return ""
 
     def _convert_conversation(self, conversation):

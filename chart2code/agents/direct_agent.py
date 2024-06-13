@@ -48,19 +48,7 @@ class DirectAgent(BaseAgent):
             "height"
         ].values[0]
         return width, height
-
-    # def _get_pdf_dimensions(self, pdf_path):
-    #     pdf_file = open(pdf_path, 'rb')
-    #     pdf_reader = PyPDF2.PdfReader(pdf_file)
-    #     # We only have 1 page
-    #     for page_num in range(len(pdf_reader.pages)):
-    #         page = pdf_reader.pages[page_num]
-    #         width = page.mediabox.right - page.mediabox.left
-    #         height = page.mediabox.top - page.mediabox.bottom
-    #         # print(f"Page {page_num+1}: Width = {width}, Height = {height}")
-    #     pdf_file.close()
-    #     return width, height
-
+    
     def _constract_conversation(self, file, width, height):
         conversation = [
             {

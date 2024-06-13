@@ -1,10 +1,11 @@
 from agents.base_agent import BaseAgent
 from common.registry import registry
 import json
-import base64
-import PyPDF2
 import pandas as pd
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 @registry.register_agent("SelfRevisionAgent")
 class SelfRevisionAgent(BaseAgent):
@@ -16,7 +17,7 @@ class SelfRevisionAgent(BaseAgent):
         super().__init__()
         self.llm_model = llm_model
         self.dimensions_info = pd.read_json(
-            "/apdcephfs/private_ponybwcao/Princess-s-CHI/dimentions_info.jsonl",
+            f"{os.environ['PROJECT_PATH']}/dimentions_info.jsonl",
             lines=True,
         )
         if prompt_path is not None:  # load from file
@@ -28,7 +29,7 @@ class SelfRevisionAgent(BaseAgent):
     def run(self, file):
         width, height = self._get_pdf_dimensions(file)
         code = self._get_direct_code(file)
-        conversation = self._constract_conversation(file, width, height, code)
+        conversation = self._constract_conversation_two_figs(file, width, height, code)
         response = self.llm_model.generate(conversation)
         return response
 
@@ -69,12 +70,6 @@ class SelfRevisionAgent(BaseAgent):
                         ),
                     },
                     {"type": "image", "image_url": file.replace(".pdf", ".png")},
-                    # {
-                    #     "type": "image",
-                    #     "image_url": file.replace("ori", "hintenhanced_output").replace(
-                    #         ".pdf", ".png"
-                    #     ),
-                    # },
                 ],
             }
         ]

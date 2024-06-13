@@ -3,7 +3,6 @@ from .hintenhanced_agent import HintEnhancedAgent
 from .gpt4evaluation_agent import GPT4EvaluationAgent
 from .selfrevision_agent import SelfRevisionAgent
 from .scaffold_agent import ScaffoldAgent
-from .js_agent import JSAgent
 from .edit_agent import EditAgent
 from common.registry import registry
 
@@ -13,7 +12,6 @@ __all__ = [
     "SelfRevisionAgent",
     "ScaffoldAgent",
     "GPT4EvaluationAgent",
-    "JSAgent",
     "EditAgent",
 ]
 
