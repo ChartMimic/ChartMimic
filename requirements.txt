@@ -1,0 +1,6 @@
+numpy
+squarify
+seaborn
+scipy
+matplotlib_venn
+PyPDF2

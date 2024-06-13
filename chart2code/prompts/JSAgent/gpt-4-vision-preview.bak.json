@@ -1,0 +1,4 @@
+{
+    "instruction": "Please help me convert the matplotlib code to Chart.js, ensuring that the charts and data are as consistent with the source code as possible. Only output the converted code, no other text description is needed.\n\nThe output result should be in the following format, with the js code written in the <script> tag:\n\n<div> <canvas id=\"myChart\"></canvas> </div> <script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script> <script> </script>\nHere is the original matplotlib code:\n```python\n{python_function}\n```",
+    "system_msg": ""
+}

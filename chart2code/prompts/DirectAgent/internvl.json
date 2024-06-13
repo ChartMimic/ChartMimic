@@ -1,0 +1,4 @@
+{
+    "instruction": "You are an expert Python developer specializing in writing Matplotlib code based on a given image. I found a very nice image in a STEM paper, but there is no corresponding source code available. I need your help to generate Python code that can reproduce the image based on the picture I provide.\nPlease note that it is necessary to use figsize=({width}, {height}) to set the image size to match the original size. Additionally, I will not provide you with the actual data in the image, so you have to extract the actual data by yourself and based on the extracted data to reproduce the image. Ensure that the code you provide can be executed directly without requiring me to add additional variables.\n\nNow, please provide me with the Matplotlib code that reproduces the image below.\n",
+    "system_msg": ""
+}

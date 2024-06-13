@@ -1,0 +1,35 @@
+agent:
+  name: null
+  prompt_path: null
+
+llm:
+  gpt-4-vision-preview:
+      name: gpt
+      engine: gpt-4-vision-preview
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  gemini-pro-vision:
+      name: gemini
+      engine: gemini-pro-vision
+      max_tokens: 4096
+      context_length: 8192
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+      use_parser: False
+
+run:
+  code4evaluation:
+    name: code4evaluation
+    original_dataset_dir: ${PROJECT_PATH}/dataset/ori
+    generated_dataset_dir: ${PROJECT_PATH}/results/Scaffold
+    template_type: scaffold
+    num_processes: 20
+    result_dir: ${PROJECT_PATH}/results

@@ -1,0 +1,4 @@
+{
+    "instruction": "```python\n{python_function}\n```\n\n========================================\n\nAccrording to the above code, please fill the <blank> of the following paragraph:\n\nThere is a reference image for you and I also have a set of data about <blank>. Please refer to the reference image and generate Python matplotlib code that can create a chart that exactly mirrors the style of the reference image and accurately represents my data.\n\n=======================================\nAnd then output the whole filled paragraph. Note that you can not fill the chart type information into the blank.",
+    "system_msg": ""
+}

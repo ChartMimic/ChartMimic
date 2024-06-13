@@ -1,0 +1,85 @@
+agent:
+  name: DirectAgent
+  prompt_path: null
+
+llm:
+  gpt-4-vision-preview:
+      name: gpt
+      engine: gpt-4-vision-preview
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  gemini-pro-vision:
+      name: gemini
+      engine: gemini-pro-vision
+      max_tokens: 4096
+      context_length: 8192
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+      use_parser: False
+  deepseek-vl-7b-chat:
+      name: deepseekvl
+      engine: ${PROJECT_PATH}/models/deepseek-vl-7b-chat
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.0
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  Qwen-VL-Chat:
+      name: qwenvl
+      engine: ${PROJECT_PATH}/models/Qwen-VL-Chat
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.0
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  InternVL-Chat-V1-5:
+        name: internvl
+        engine: ${PROJECT_PATH}/models/InternVL-Chat-V1-5
+        context_length: 4096
+        max_tokens: 4096
+        temperature: 0.0
+        top_p: 1
+        retry_delays: 20
+        max_retry_iters: 15
+        stop: []
+  idefics2:
+      name: idefics2
+      engine: ${PROJECT_PATH}/models/idefics2-8b
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.0
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  llava-v1.6-34b-hf:
+      name: llava
+      engine: ${PROJECT_PATH}/models/llava-v1.6-34b-hf
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+
+run:
+  code4evaluation:
+    name: code4evaluation
+    original_dataset_dir: ${PROJECT_PATH}/dataset/ori
+    generated_dataset_dir: ${PROJECT_PATH}/results
+    template_type: direct
+    num_processes: 20
+    result_dir: ${PROJECT_PATH}/results

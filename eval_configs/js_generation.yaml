@@ -1,0 +1,68 @@
+agent:
+  name: JSAgent
+  prompt_path: ${PROJECT_PATH}/chart2code/prompts/JSAgent/gpt-4-vision-preview.json
+
+llm:
+  gpt-4-vision-preview:
+      name: gpt
+      engine: gpt-4-vision-preview
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.0
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  gemini-pro-vision:
+      name: gemini
+      engine: gemini-pro-vision
+      max_tokens: 4096
+      context_length: 8192
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+      use_parser: False
+  deepseekvl:
+      name: deepseekvl
+      engine: ${PROJECT_PATH}/models/deepseek-vl-7b-chat
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  qwenvl:
+      name: qwenvl
+      engine: ${PROJECT_PATH}/models/Qwen-VL-Chat
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+
+
+run:
+  chart2code:
+    name: chart2code
+    dataset_dir: ${PROJECT_PATH}/dataset/edit_500
+    result_dir: ${PROJECT_PATH}/results
+    num_processes: 10
+  gpt4evaluation:
+    name: gpt4evaluation
+    original_dataset_dir: ${PROJECT_PATH}/results/original_data
+    generated_dataset_dir: ${PROJECT_PATH}/results
+    template_type: direct
+    num_processes: 10
+    result_dir: ${PROJECT_PATH}/results
+  autoevaluation:
+    name: autoevaluation
+    original_dataset_dir: ${PROJECT_PATH}/results/original_data
+    generated_dataset_dir: ${PROJECT_PATH}/results
+    template_type: direct
+    num_processes: 1
+    result_dir: ${PROJECT_PATH}/results

@@ -1,0 +1,16 @@
+__pycache__
+.vscode
+.env
+.ipynb_checkpoints
+trash
+*results
+*.ipynb
+*.png
+*.bak
+dataset/ori_dots
+matplotlib/
+edit_results_bak
+*.xlsx
+dataset/ori_without_text/
+.DS_Store
+*.sh

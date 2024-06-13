@@ -1,0 +1,4 @@
+{
+    "instruction": "You are a professional python expert, you can write python codes.\nNow, I want you to conduct a task -- given python code, extract variable to # Part 2: Data Preparation\nSpecifically, you should extract following variable:\n1. label name for legend and plot type. e.g.,\n```python\nax1.plot(time_step, rsa_gt, label='line_label') # 'line_label' is expected to be extracted\n```\n2. values for xlim, ylim, xlabel, ylabel, xticks, yticks, xtickslabel, ytickslabel, title, axhiline, ahvline in python code.\n\nPlease extract the above values into variables and put the variables into # Part 2: Data Preparation section.\n\nBelow is my code (Please output the complete python code):\n```python\n{python_function}\n```\n",
+    "system_msg": ""
+}
