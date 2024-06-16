@@ -27,6 +27,8 @@ class ChartEdit(BaseTask):
         self.run_config = run_config
         self.agent_config = agent_config
         self.llm_config = llm_config
+
+        os.makedirs(self.run_config["result_dir"], exist_ok=True)
         self.results_file = os.path.join(
             self.run_config["result_dir"],
             "{}_{}_{}_results.json".format(

@@ -19,8 +19,8 @@
   📃 <a href="">Paper</a>
 </div>
 
-
 ## 🎉 What's New
+
 - **[2024.06.13]** 📣 ChartMimic is released.
 
 ## 🎏 Introduction
@@ -33,8 +33,8 @@ ChartMimic includes **1,000 human-curated (figure, instruction, code) triplets**
 <img src="./assets/framework.png" style="width: 100%;height: 100%">
 </div>
 
-
 ## 📄 Table of Contents
+
 <details>
 <summary>
 Click to expand the table of contents
@@ -53,18 +53,20 @@ Click to expand the table of contents
 
 </details>
 
-
-## 🚀 Quick Start 
+## 🚀 Quick Start
 
 Here we provide a quick start guide to evaluate LMMs on ChartMimic.
 
 ### Setup Environment
+
 ```shell
 conda create -n chartmimic python==3.9.0
 conda activate chartmimic
 pip install -r requirements.txt
 ```
+
 Set up the environment variables in `.env` file.
+
 ```shell
 PROJECT_PATH=${YOUR_PROJECT_PATH}
 OPENAI_BASE_URL=${YOUR_OPEN_AI_BASE_URL}
@@ -74,7 +76,9 @@ GOOGLE_API_KEY=${YOUR_ANTHROPIC_API_KEY}
 ```
 
 ### Download Data
+
 You can download the whole evaluation data by running the following command:
+
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
@@ -83,8 +87,11 @@ tar -xzvf test.tar.gz -C dataset
 ```
 
 ### Evaluate Models
+
 #### Task 1: Direct Mimic
+
 Example script for `gpt-4-vision-preview` on the `Direct Mimic` task:
+
 ```
 python chart2code/main.py \
 --cfg_path eval_configs/direct_generation.yaml \
@@ -93,31 +100,38 @@ python chart2code/main.py \
 ```
 
 #### Task 2: Customized Mimic
+
 Example script for `gpt-4-vision-preview` on the `Customized Mimic` task:
+
 ```
 python chart2code/main.py \
---cfg_path eval_configs/edit_direct.yaml \
+--cfg_path eval_configs/customized_generation.yaml \
 --tasks chartedit \
 --model gpt-4-vision-preview
 ```
 
 #### Different LMMs
+
 We now offer configuration for 14 SOTA LMM models (`gpt-4-vision-preview`, `claude-3-opus-20240229`, `gemini-pro-vision`, `Phi-3-vision-128k-instruct`,`MiniCPM-Llama3-V-2_5`,`InternVL-Chat-V1-5`, `cogvlm2-llama3-chat-19B`,`deepseekvl`,`llava-v1.6-mistral-7b-hf`,`llava-v1.6-34b-hf`, `idefics2-8b`, `llava-v1.6-vicuna-13b-hf`,`llava-v1.6-vicuna-7b-hf` and `qwenvl`).
  <!-- and a simple agent based on direct prompting. You could also customize your own [agents](https://github.com/hkust-nlp/AgentBoard/blob/main/assets/agent_customization.md) and [LMMs](https://github.com/hkust-nlp/AgentBoard/blob/main/assets/llm_customization.md). Models supported by [vLLM](https://github.com/vllm-project/vllm) should be generally supported in AgentBoard, while different models may require specific prompt templates. -->
 
 <!-- #### Different Prompting Methods -->
 
 ## 📚 Data
+
 You can download the whole evaluation data by running the following command:
+
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
 wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/test.tar.gz
 tar -xzvf test.tar.gz -C dataset
 ```
+
 To help researchers quickly understand evaluation data, we provide Dataset Viewer at Huggingface Dataset: 🤗 [ChartMimic](https://huggingface.co/datasets/ChartMimic/ChartMimic).
 
 The file structure of evaluation data is as follows:
+
 ```
 .
 ├── customized_500/ # Data for Customized Mimic
@@ -125,10 +139,10 @@ The file structure of evaluation data is as follows:
 └── test.jsonl  # Data for both tasks
 ```
 
-
-
 ## 💬 Citation
+
 If you find this repository useful, please consider giving star and citing our paper:
+
 ```
 @article{shi2024chartmimic,
   title={ChartMimic: Evaluating LMM’s Cross-Modal Reasoning Capability via Chart-to-Code Generation},
@@ -139,14 +153,14 @@ Yang},
 }
 ```
 
-
 ## 📌 License
+
 [![Apache-2.0 license](https://img.shields.io/badge/Code%20License-Apache--2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 The ChartMimic data and codebase is licensed under a [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
-
 ## 🎙️ Acknowledgements
+
 We would like to express our gratitude to [agentboard](https://github.com/hkust-nlp/AgentBoard) for their project codebase.
 
 <!-- ## Scaffold Agent

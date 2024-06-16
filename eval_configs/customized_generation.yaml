@@ -175,11 +175,6 @@ llm:
       stop: []
 
 run:
-  chart2code:
-    name: chart2code
-    dataset_dir: ${PROJECT_PATH}/dataset/ori
-    result_dir: ${PROJECT_PATH}/results
-    num_processes: 1
   gpt4evaluation:
     name: gpt4evaluation
     original_dataset_dir: ${PROJECT_PATH}/results/original_data
@@ -187,15 +182,8 @@ run:
     template_type: direct
     num_processes: 20
     result_dir: ${PROJECT_PATH}/results
-  autoevaluation:
-    name: autoevaluation
-    original_dataset_dir: ${PROJECT_PATH}/results/original_data
-    generated_dataset_dir: ${PROJECT_PATH}/results
-    template_type: direct
-    num_processes: 1
-    result_dir: ${PROJECT_PATH}/results
   chartedit:
     name: chartedit
     dataset_dir: ${PROJECT_PATH}/dataset/ori_500
-    result_dir: ${PROJECT_PATH}/edit_results
+    result_dir: ${PROJECT_PATH}/results/customized
     num_processes: 1

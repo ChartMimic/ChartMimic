@@ -177,7 +177,7 @@ run:
   chart2code:
     name: chart2code
     dataset_dir: ${PROJECT_PATH}/dataset/ori_500
-    result_dir: ${PROJECT_PATH}/results
+    result_dir: ${PROJECT_PATH}/results/direct
     num_processes: 1
   gpt4evaluation:
     name: gpt4evaluation
@@ -185,11 +185,4 @@ run:
     generated_dataset_dir: ${PROJECT_PATH}/results
     template_type: direct
     num_processes: 20
-    result_dir: ${PROJECT_PATH}/results
-  autoevaluation:
-    name: autoevaluation
-    original_dataset_dir: ${PROJECT_PATH}/results/original_data
-    generated_dataset_dir: ${PROJECT_PATH}/results
-    template_type: direct
-    num_processes: 1
     result_dir: ${PROJECT_PATH}/results
