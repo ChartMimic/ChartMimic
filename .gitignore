@@ -15,4 +15,5 @@ dataset/ori_without_text/
 .DS_Store
 *.sh
 !assets/chartmimic.png
+!assets/framework.png
 dataset
