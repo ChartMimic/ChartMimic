@@ -6,7 +6,7 @@
 
 <div align="center">
 
-![Data License](https://img.shields.io/badge/Code%20License-Apache--2.0-blue.svg)
+![Data License](https://img.shields.io/badge/Data%20License-Apache--2.0-blue.svg)
 ![Code License](https://img.shields.io/badge/Code%20License-Apache--2.0-blue.svg)
 ![Python 3.9+](https://img.shields.io/badge/python-3.9.0-blue.svg)
 </div>
@@ -27,7 +27,11 @@
 
 ChartMimic aims at assessing **the visually-grounded code generation capabilities** of large multimodal models (LMMs). ChartMimic utilizes information-intensive visual charts and textual instructions as inputs, requiring LMMs to generate the corresponding code for chart rendering.
 
-ChartMimic includes **1,000 human-curated (figure, instruction, code) triplets**, which represent the authentic chart use cases found in scientific papers across various domains(e.g., Physics, Computer Science, Economics, etc). These charts span 18 regular types and 4 advanced types, diversifying into 191 subcategories. Furthermore, we propose multi-level evaluation metrics to provide an automatic and thorough assessment of the output code and the rendered charts. Unlike existing code generation benchmarks, ChartMimic places emphasis on evaluating LMMs' capacity to harmonize a blend of cognitive capabilities, encompassing **visual understanding, code generation, and cross-modal reasoning**. 
+ChartMimic includes **1,000 human-curated (figure, instruction, code) triplets**, which represent the authentic chart use cases found in scientific papers across various domains(e.g., Physics, Computer Science, Economics, etc). These charts span 18 regular types and 4 advanced types, diversifying into 191 subcategories. Furthermore, we propose **multi-level evaluation metrics** to provide an automatic and thorough assessment of the output code and the rendered charts. Unlike existing code generation benchmarks, ChartMimic places emphasis on evaluating LMMs' capacity to harmonize a blend of cognitive capabilities, encompassing **visual understanding, code generation, and cross-modal reasoning**.
+
+<div align="center">
+<img src="./assets/framework.png" style="width: 100%;height: 100%">
+</div>
 
 
 ## Table of Contents
@@ -41,7 +45,7 @@ Click to expand the table of contents
 - [🚀 Quick Start](#-quick-start)
   - [Setup Environment](#setup-environment)
   - [Evaluate Models](#evaluate-models)
-- [Data](#data)
+- [📚 Data](#data)
   - [Data Overview](#data-overview)
   - [Download Link](#download-link)
 - [️Citation](#️citation)
@@ -52,7 +56,7 @@ Click to expand the table of contents
 
 ## 🚀 Quick Start 
 
-Here we provide a quick start guide to evaluate LMMs on ChartMimic. 
+Here we provide a quick start guide to evaluate LMMs on ChartMimic.
 
 ### Setup Environment
 ```shell
@@ -60,6 +64,16 @@ conda create -n chartmimic python==3.9.0
 conda activate chartmimic
 pip install -r requirements.txt
 ```
+
+### Download Data
+You can download the whole evaluation data by running the following command:
+```shell
+cd ChartMimic # cd to the root directory of this repository
+mkdir dataset
+wget https://huggingface.co/datasets/ChartMimic/ChartMimic/blob/main/test.tar.gz
+tar -xzvf filename.tar.gz -C dataset
+```
+
 ### Evaluate Models
 #### Direct Mimic
 Example script for `gpt-4-vision-preview` on the `Direct Mimic` task:
@@ -85,7 +99,7 @@ We now offer configuration for 14 SOTA LMM models (`gpt-4-vision-preview`, `clau
 
 <!-- #### Different Prompting Methods -->
 
-## Data
+## 📚 Data
 ### Download Link
 You can download the whole evaluation data by running the following command:
 ```shell
