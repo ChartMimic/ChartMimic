@@ -1,6 +1,6 @@
 agent:
   name: DirectAgent
-  prompt_path: ${PROJECT_PATH}/chart2code/prompts/DirectAgent/internvl.json
+  prompt_path: ${PROJECT_PATH}/chart2code/prompts/DirectAgent/gpt-4-vision-preview.json
 
 llm:
   gpt-4-vision-preview:
@@ -176,7 +176,7 @@ llm:
 run:
   chart2code:
     name: chart2code
-    dataset_dir: ${PROJECT_PATH}/dataset/ori
+    dataset_dir: ${PROJECT_PATH}/dataset/ori_500
     result_dir: ${PROJECT_PATH}/results
     num_processes: 1
   gpt4evaluation:

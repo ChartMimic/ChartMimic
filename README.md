@@ -79,7 +79,7 @@ You can download the whole evaluation data by running the following command:
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
 wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/test.tar.gz
-tar -xzvf filename.tar.gz -C dataset
+tar -xzvf test.tar.gz -C dataset
 ```
 
 ### Evaluate Models
@@ -113,7 +113,7 @@ You can download the whole evaluation data by running the following command:
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
 wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/test.tar.gz
-tar -xzvf filename.tar.gz -C dataset
+tar -xzvf test.tar.gz -C dataset
 ```
 To help researchers quickly understand evaluation data, we provide Dataset Viewer at Huggingface Dataset: 🤗 [ChartMimic](https://huggingface.co/datasets/ChartMimic/ChartMimic).
 

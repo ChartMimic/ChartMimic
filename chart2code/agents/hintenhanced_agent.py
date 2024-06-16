@@ -16,7 +16,7 @@ class HintEnhancedAgent(BaseAgent):
         super().__init__()
         self.llm_model = llm_model
         self.dimensions_info = pd.read_json(
-            "/apdcephfs/private_ponybwcao/Princess-s-CHI/dimentions_info.jsonl",
+            f"{os.environ['PROJECT_PATH']}/dimentions_info.jsonl",
             lines=True,
         )
         if prompt_path is not None:  # load from file

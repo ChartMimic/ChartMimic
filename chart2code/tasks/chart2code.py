@@ -55,16 +55,16 @@ class Chart2Code(BaseTask):
             self.run_config["dataset_dir"],
             self.run_config.get("direct_dir", None),
         )
-        # processes = []
-        # for rank in range(self.run_config["num_processes"]):
-        #     p = Process(target=self._muti_process_run, args=(rank,))
-        #     p.start()
-        #     processes.append(p)
-        # for p in processes:
-        #     p.join()
-        # Debug use
+        processes = []
         for rank in range(self.run_config["num_processes"]):
-            self._muti_process_run(rank)
+            p = Process(target=self._muti_process_run, args=(rank,))
+            p.start()
+            processes.append(p)
+        for p in processes:
+            p.join()
+        # Debug use
+        # for rank in range(self.run_config["num_processes"]):
+            # self._muti_process_run(rank)
         total = pd.DataFrame()
         for rank in range(self.run_config["num_processes"]):
             total = pd.concat(
