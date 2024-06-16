@@ -20,10 +20,10 @@
 </div>
 
 
-## What's New
+## 🎉 What's New
 - **[2024.06.13]** 📣 ChartMimic is released.
 
-## Introduction
+## 🎏 Introduction
 
 ChartMimic aims at assessing **the visually-grounded code generation capabilities** of large multimodal models (LMMs). ChartMimic utilizes information-intensive visual charts and textual instructions as inputs, requiring LMMs to generate the corresponding code for chart rendering.
 
@@ -34,23 +34,23 @@ ChartMimic includes **1,000 human-curated (figure, instruction, code) triplets**
 </div>
 
 
-## Table of Contents
+## 📄 Table of Contents
 <details>
 <summary>
 Click to expand the table of contents
 </summary>
 
-- [What's New](#whats-new)
-- [Introduction](#introduction)
+- [🎉 What's New](#whats-new)
+- [🎏 Introduction](#introduction)
 - [🚀 Quick Start](#-quick-start)
   - [Setup Environment](#setup-environment)
+  - [Download Data](#download-data)
   - [Evaluate Models](#evaluate-models)
-- [📚 Data](#data)
-  - [Data Overview](#data-overview)
-  - [Download Link](#download-link)
-- [️Citation](#️citation)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [📚 Data](#-data)
+- [💬 Citation](#-citation)
+- [📌 License](#-license)
+- [🎙️ Acknowledgements](#️-acknowledgements)
+
 </details>
 
 
@@ -64,18 +64,26 @@ conda create -n chartmimic python==3.9.0
 conda activate chartmimic
 pip install -r requirements.txt
 ```
+Set up the environment variables in `.env` file.
+```shell
+PROJECT_PATH=${YOUR_PROJECT_PATH}
+OPENAI_BASE_URL=${YOUR_OPEN_AI_BASE_URL}
+OPENAI_API_KEY=${YOUR_OPENAI_API_KEY}
+ANTHROPIC_API_KEY=${YOUR_ANTHROPIC_API_KEY}
+GOOGLE_API_KEY=${YOUR_ANTHROPIC_API_KEY}
+```
 
 ### Download Data
 You can download the whole evaluation data by running the following command:
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
-wget https://huggingface.co/datasets/ChartMimic/ChartMimic/blob/main/test.tar.gz
+wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/test.tar.gz
 tar -xzvf filename.tar.gz -C dataset
 ```
 
 ### Evaluate Models
-#### Direct Mimic
+#### Task 1: Direct Mimic
 Example script for `gpt-4-vision-preview` on the `Direct Mimic` task:
 ```
 python chart2code/main.py \
@@ -84,7 +92,7 @@ python chart2code/main.py \
 --model gpt-4-vision-preview
 ```
 
-#### Customized Mimic
+#### Task 2: Customized Mimic
 Example script for `gpt-4-vision-preview` on the `Customized Mimic` task:
 ```
 python chart2code/main.py \
@@ -100,20 +108,26 @@ We now offer configuration for 14 SOTA LMM models (`gpt-4-vision-preview`, `clau
 <!-- #### Different Prompting Methods -->
 
 ## 📚 Data
-### Download Link
 You can download the whole evaluation data by running the following command:
 ```shell
-wget https://huggingface.co/datasets/ChartMimic/ChartMimic/blob/main/dataset.zip
-```
-Please uncommpress the file and move the data to `ChartMimic/dataset`.
-```shell
-cd ChartMimic
+cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
-upzip dataset.zip
+wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/test.tar.gz
+tar -xzvf filename.tar.gz -C dataset
+```
+To help researchers quickly understand evaluation data, we provide Dataset Viewer at Huggingface Dataset: 🤗 [ChartMimic](https://huggingface.co/datasets/ChartMimic/ChartMimic).
+
+The file structure of evaluation data is as follows:
+```
+.
+├── customized_500/ # Data for Customized Mimic
+├── ori_500/  # Data for Direct Mimic
+└── test.jsonl  # Data for both tasks
 ```
 
 
-## Citation
+
+## 💬 Citation
 If you find this repository useful, please consider giving star and citing our paper:
 ```
 @article{shi2024chartmimic,
@@ -126,13 +140,13 @@ Yang},
 ```
 
 
-## License
+## 📌 License
 [![Apache-2.0 license](https://img.shields.io/badge/Code%20License-Apache--2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 The ChartMimic data and codebase is licensed under a [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
 
-## Acknowledgements
+## 🎙️ Acknowledgements
 We would like to express our gratitude to [agentboard](https://github.com/hkust-nlp/AgentBoard) for their project codebase.
 
 <!-- ## Scaffold Agent
