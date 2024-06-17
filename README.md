@@ -16,7 +16,7 @@
   🌐 <a href="https://chartmimic.github.io/">Website</a> |
   🏆 <a href="https://chartmimic.github.io/">Leaderboard</a> |
   📚 <a href="https://huggingface.co/datasets/ChartMimic/ChartMimic">Data</a> |
-  📃 <a href="">Paper</a>
+  📃 <a href="https://arxiv.org/abs/2406.09961">Paper</a>
 </div>
 
 ## 🎉 What's New
@@ -144,12 +144,12 @@ The file structure of evaluation data is as follows:
 If you find this repository useful, please consider giving star and citing our paper:
 
 ```
-@article{shi2024chartmimic,
-  title={ChartMimic: Evaluating LMM’s Cross-Modal Reasoning Capability via Chart-to-Code Generation},
-  author={Chufan Shi and Cheng Yang and Yaxin Liu and Bo Shui and Junjie Wang and Mohan Jing and Linran
-Xu and Xinyu Zhu and Siheng Li and Yuxiang Zhang and Gongye Liu and Xiaomei Nie and Deng Cai and Yujiu
-Yang},
-  year={2024},
+@article{
+      shi2024chartmimic,
+      title={ChartMimic: Evaluating LMM’s Cross-Modal Reasoning Capability via Chart-to-Code Generation},
+      author={Chufan Shi and Cheng Yang and Yaxin Liu and Bo Shui and Junjie Wang and Mohan Jing and Linran Xu and Xinyu Zhu and Siheng Li and Yuxiang Zhang and Gongye Liu and Xiaomei Nie and Deng Cai and Yujiu Yang},
+      year={2024},
+      journal={arXiv preprint arXiv:2406.09961},
 }
 ```
 
