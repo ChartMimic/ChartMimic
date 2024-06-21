@@ -19,7 +19,7 @@ def extract_code(text):
     return code
 
 def get_variable_code(file):
-    edit_ori_file = "/home/yc21/project/Princess-s-CHI/dataset/edit_500/" + file
+    edit_ori_file = "{}/dataset/customized_500/".format(os.environ["PROJECT_PATH"]) + file
     with open(edit_ori_file, "r") as f:
         code = f.read()
         pattern = re.compile(r"# ===================\n# Part 2: Data Preparation\n# ===================\n(.*?)# ===================\n# Part 3: Plot Configuration and Rendering\n# ===================", re.DOTALL)
@@ -93,7 +93,7 @@ def _muti_process_run(rank, data, num_processes):
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument(
-        "--input_file", type=str, default="/home/yc21/project/Princess-s-CHI/results/chart2code_gpt_DirectAgent_results.json"
+        "--input_file", type=str, default=""
     )
     parser.add_argument(
         "--template_type", type=str, default="direct"

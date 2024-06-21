@@ -60,9 +60,8 @@ Here we provide a quick start guide to evaluate LMMs on ChartMimic.
 ### Setup Environment
 
 ```shell
-conda create -n chartmimic python==3.9.0
+conda env create -f environment.yaml
 conda activate chartmimic
-pip install -r requirements.txt
 ```
 
 Set up the environment variables in `.env` file.
@@ -92,22 +91,40 @@ tar -xzvf test.tar.gz -C dataset
 
 Example script for `gpt-4-vision-preview` on the `Direct Mimic` task:
 
-```
-python chart2code/main.py \
---cfg_path eval_configs/direct_generation.yaml \
---tasks chart2code \
---model gpt-4-vision-preview
+```shell
+export PROJECT_PATH=${YOUR_PROJECT_PATH}
+
+# Step 1: Get Model Reponse
+bash scripts/direct_mimic/run_generation.sh
+
+# Step 2: Run the Code in the Response
+bash scripts/direct_mimic/run_code.sh
+
+# Step 3: Get Lowlevel Score
+bash scripts/direct_mimic/run_evaluation_lowlevel.sh
+
+# Step 4: Get Highlevel Score
+bash scripts/direct_mimic/run_evaluation_highlevel.sh
 ```
 
 #### Task 2: Customized Mimic
 
 Example script for `gpt-4-vision-preview` on the `Customized Mimic` task:
 
-```
-python chart2code/main.py \
---cfg_path eval_configs/customized_generation.yaml \
---tasks chartedit \
---model gpt-4-vision-preview
+```shell
+export PROJECT_PATH=${YOUR_PROJECT_PATH}
+
+# Step 1: Get Model Reponse
+bash scripts/customized_mimic/run_generation.sh
+
+# Step 2: Run the Code in the Response
+bash scripts/customized_mimic/run_code.sh
+
+# Step 3: Get Lowlevel Score
+bash scripts/customized_mimic/run_evaluation_lowlevel.sh
+
+# Step 4: Get Highlevel Score
+bash scripts/customized_mimic/run_evaluation_highlevel.sh
 ```
 
 #### Different LMMs

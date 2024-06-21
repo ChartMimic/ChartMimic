@@ -15,5 +15,6 @@ dataset/ori_without_text/
 .DS_Store
 !assets/chartmimic.png
 !assets/framework.png
+!scripts/direct_mimic/get_results.ipynb
 dataset
 .history

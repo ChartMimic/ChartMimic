@@ -1,0 +1,154 @@
+agent:
+  name: EditAgent
+  prompt_path: null
+
+llm:
+  gpt-4-vision-preview:
+      name: gpt
+      engine: gpt-4-vision-preview
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  claude-3-opus-20240229:
+      name: gpt
+      engine: gpt-4-vision-preview
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  gemini-pro-vision:
+      name: gemini
+      engine: gemini-pro-vision
+      max_tokens: 4096
+      context_length: 8192
+      temperature: 0.1
+      top_p: 0.95
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+      use_parser: False
+  deepseek-vl-7b-chat:
+      name: deepseekvl
+      engine: ${PROJECT_PATH}/models/deepseek-vl-7b-chat
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.0
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  Qwen-VL-Chat:
+      name: qwenvl
+      engine: ${PROJECT_PATH}/models/Qwen-VL-Chat
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.0
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  InternVL-Chat-V1-5:
+        name: internvl
+        engine: ${PROJECT_PATH}/models/InternVL-Chat-V1-5
+        context_length: 4096
+        max_tokens: 4096
+        temperature: 0.0
+        top_p: 1
+        retry_delays: 20
+        max_retry_iters: 15
+        stop: []
+  idefics2-8b:
+      name: idefics2
+      engine: ${PROJECT_PATH}/models/idefics2-8b
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.0
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  llava-v1.6-34b-hf:
+      name: llava
+      engine: ${PROJECT_PATH}/models/llava-v1.6-34b-hf
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  Phi-3-vision-128k-instruct:
+      name: phi3
+      engine: ${PROJECT_PATH}/models/Phi-3-vision-128k-instruct
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  MiniCPM-Llama3-V-2_5:
+      name: minicpm
+      engine: ${PROJECT_PATH}/models/MiniCPM-Llama3-V-2_5
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  cogvlm2-llama3-chat-19B:
+      name: cogvlm2
+      engine: ${PROJECT_PATH}/models/cogvlm2-llama3-chat-19B
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  llava-v1.6-mistral-7b-hf:
+      name: llava
+      engine: ${PROJECT_PATH}/models/llava-1.5-7b-hf
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  llava-v1.6-vicuna-7b-hf:
+      name: llava
+      engine: ${PROJECT_PATH}/models/llava-1.5-7b-hf
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+  llava-v1.6-vicuna-13b-hf:
+      name: llava
+      engine: ${PROJECT_PATH}/models/llava-1.5-13b-hf
+      context_length: 4096
+      max_tokens: 4096
+      temperature: 0.1
+      top_p: 1
+      retry_delays: 20
+      max_retry_iters: 15
+      stop: []
+run:
+  code4evaluation:
+    name: code4evaluation
+    original_dataset_dir: ${PROJECT_PATH}/dataset/customized_500
+    generated_dataset_dir: ${PROJECT_PATH}/results/customized
+    template_type: edit
+    num_processes: 40
+    result_dir: ${PROJECT_PATH}/results/customized
