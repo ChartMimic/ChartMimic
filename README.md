@@ -20,7 +20,7 @@
 </div>
 
 ## 🎉 What's New
-
+- **[2025.02.01]** 🥳 ChartMimic is accepted by ICLR 2025.
 - **[2024.06.13]** 📣 ChartMimic is released.
 
 ## 🎏 Introduction
