@@ -138,6 +138,29 @@ We now offer configuration for 14 SOTA LMM models (`gpt-4-vision-preview`, `clau
 
 You can download the whole evaluation data by running the following command:
 
+### New Version
+```shell
+cd ChartMimic # cd to the root directory of this repository
+mkdir dataset
+wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/dataset-iclr.tar.gz
+tar -xzvf dataset-iclr.tar.gz -C dataset
+```
+
+To help researchers quickly understand evaluation data, we provide Dataset Viewer at Huggingface Dataset: 🤗 [ChartMimic](https://huggingface.co/datasets/ChartMimic/ChartMimic).
+
+The file structure of evaluation data is as follows:
+
+```
+.
+├── customized_1800/
+├── customized_600/
+├── direct_1800/
+└── direct_600/
+```
+
+
+### Old Version
+
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
