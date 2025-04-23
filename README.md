@@ -138,7 +138,7 @@ We now offer configuration for 14 SOTA LMM models (`gpt-4-vision-preview`, `clau
 
 You can download the whole evaluation data by running the following command:
 
-### New Version
+### [New Version](https://arxiv.org/abs/2406.09961v2)
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
@@ -159,7 +159,7 @@ The file structure of evaluation data is as follows:
 ```
 
 
-### Old Version
+### [Old Version](https://arxiv.org/abs/2406.09961v1)
 
 ```shell
 cd ChartMimic # cd to the root directory of this repository
