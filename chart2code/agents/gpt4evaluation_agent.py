@@ -33,8 +33,8 @@ class GPT4EvaluationAgent(BaseAgent):
                 "role": "user",
                 "content": [
                     {"type": "text", "text": self.instruction},
-                    {"type": "image", "image_url": generated_png_file},
                     {"type": "image", "image_url": orginal_png_file},
+                    {"type": "image", "image_url": generated_png_file},
                 ],
             }
         ]
