@@ -20,6 +20,7 @@
 </div>
 
 ## 🎉 What's New
+
 - **[2025.02.01]** 🥳 ChartMimic is accepted by ICLR 2025.
 - **[2024.06.13]** 📣 ChartMimic is released.
 
@@ -27,10 +28,10 @@
 
 ChartMimic aims at assessing **the visually-grounded code generation capabilities** of large multimodal models (LMMs). ChartMimic utilizes information-intensive visual charts and textual instructions as inputs, requiring LMMs to generate the corresponding code for chart rendering.
 
-ChartMimic includes **1,000 human-curated (figure, instruction, code) triplets**, which represent the authentic chart use cases found in scientific papers across various domains(e.g., Physics, Computer Science, Economics, etc). These charts span 18 regular types and 4 advanced types, diversifying into 191 subcategories. Furthermore, we propose **multi-level evaluation metrics** to provide an automatic and thorough assessment of the output code and the rendered charts. Unlike existing code generation benchmarks, ChartMimic places emphasis on evaluating LMMs' capacity to harmonize a blend of cognitive capabilities, encompassing **visual understanding, code generation, and cross-modal reasoning**.
+ChartMimic includes **4,800 human-curated (figure, instruction, code) triplets**, which represent the authentic chart use cases found in scientific papers across various domains(e.g., Physics, Computer Science, Economics, etc). These charts span 18 regular types and 4 advanced types, diversifying into 201 subcategories. Furthermore, we propose **multi-level evaluation metrics** to provide an automatic and thorough assessment of the output code and the rendered charts. Unlike existing code generation benchmarks, ChartMimic places emphasis on evaluating LMMs' capacity to harmonize a blend of cognitive capabilities, encompassing **visual understanding, code generation, and cross-modal reasoning**.
 
 <div align="center">
-<img src="./assets/framework.png" style="width: 100%;height: 100%">
+<img src="./assets/framework.jpg" style="width: 100%;height: 100%">
 </div>
 
 ## 📄 Table of Contents
@@ -139,6 +140,7 @@ We now offer configuration for 14 SOTA LMM models (`gpt-4-vision-preview`, `clau
 You can download the whole evaluation data by running the following command:
 
 ### [New Version](https://arxiv.org/abs/2406.09961v2)
+
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
@@ -157,7 +159,6 @@ The file structure of evaluation data is as follows:
 ├── direct_1800/
 └── direct_600/
 ```
-
 
 ### [Old Version](https://arxiv.org/abs/2406.09961v1)
 
