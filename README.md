@@ -161,15 +161,13 @@ The file structure of evaluation data is as follows:
 ```
 
 ### [Old Version](https://arxiv.org/abs/2406.09961v1)
-
+⚠️ For old version, please use the `dimentions_info.jsonl` and `dimentions_info_edit.jsonl` under the [`legacy`](https://github.com/ChartMimic/ChartMimic/tree/main/legacy) folder.
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
 wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/dataset-old.tar.gz
 tar -xzvf dataset-old.tar.gz -C dataset
 ```
-
-To help researchers quickly understand evaluation data, we provide Dataset Viewer at Huggingface Dataset: 🤗 [ChartMimic](https://huggingface.co/datasets/ChartMimic/ChartMimic).
 
 The file structure of evaluation data is as follows:
 
