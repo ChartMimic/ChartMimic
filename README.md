@@ -165,7 +165,7 @@ The file structure of evaluation data is as follows:
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
-wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/test.tar.gz
+wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/dataset-old.tar.gz
 tar -xzvf test.tar.gz -C dataset
 ```
 
@@ -185,12 +185,11 @@ The file structure of evaluation data is as follows:
 If you find this repository useful, please consider giving star and citing our paper:
 
 ```
-@article{
-      shi2024chartmimic,
-      title={ChartMimic: Evaluating LMM’s Cross-Modal Reasoning Capability via Chart-to-Code Generation},
-      author={Chufan Shi and Cheng Yang and Yaxin Liu and Bo Shui and Junjie Wang and Mohan Jing and Linran Xu and Xinyu Zhu and Siheng Li and Yuxiang Zhang and Gongye Liu and Xiaomei Nie and Deng Cai and Yujiu Yang},
-      year={2024},
-      journal={arXiv preprint arXiv:2406.09961},
+@article{yang2024chartmimic,
+        title={Chartmimic: Evaluating lmm's cross-modal reasoning capability via chart-to-code generation},
+        author={Yang, Cheng and Shi, Chufan and Liu, Yaxin and Shui, Bo and Wang, Junjie and Jing, Mohan and Xu, Linran and Zhu, Xinyu and Li, Siheng and Zhang, Yuxiang and others},
+        journal={arXiv preprint arXiv:2406.09961},
+        year={2024}
 }
 ```
 
