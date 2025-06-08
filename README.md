@@ -82,8 +82,8 @@ You can download the whole evaluation data by running the following command:
 ```shell
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
-wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/test.tar.gz
-tar -xzvf test.tar.gz -C dataset
+wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/dataset-iclr.tar.gz
+tar -xzvf dataset-iclr.tar.gz -C dataset
 ```
 
 ### Evaluate Models
@@ -166,7 +166,7 @@ The file structure of evaluation data is as follows:
 cd ChartMimic # cd to the root directory of this repository
 mkdir dataset
 wget https://huggingface.co/datasets/ChartMimic/ChartMimic/resolve/main/dataset-old.tar.gz
-tar -xzvf test.tar.gz -C dataset
+tar -xzvf dataset-old.tar.gz -C dataset
 ```
 
 To help researchers quickly understand evaluation data, we provide Dataset Viewer at Huggingface Dataset: 🤗 [ChartMimic](https://huggingface.co/datasets/ChartMimic/ChartMimic).
