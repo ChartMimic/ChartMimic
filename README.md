@@ -21,6 +21,8 @@
 
 ## 🎉 What's New
 
+
+- **[2025.06.18]** 🔧 ChartMimic has been integrated into [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/pull/1056). Welcome to use ChartMimic through [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/pull/1056)! Special thanks to the VLMEvalKit team.
 - **[2025.02.01]** 🥳 ChartMimic is accepted by ICLR 2025.
 - **[2024.06.13]** 📣 ChartMimic is released.
 
@@ -57,6 +59,7 @@ Click to expand the table of contents
 ## 🚀 Quick Start
 
 Here we provide a quick start guide to evaluate LMMs on ChartMimic.
+> Kind Note: ChartMimic has been integrated into [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/pull/1056). Welcome to use ChartMimic through [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/pull/1056)!
 
 ### Setup Environment
 
