@@ -21,7 +21,7 @@
 
 ## 🎉 What's New
 
-
+- **[2025.12.04]** ChartMimic has been adopted by Qwen3-VL as one of the benchmarks for Multi-Modal Coding. Please check the [paper](https://arxiv.org/pdf/2511.21631) for more details.
 - **[2025.06.18]** 🔧 ChartMimic has been integrated into [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/pull/1056). Welcome to use ChartMimic through [VLMEvalKit](https://github.com/open-compass/VLMEvalKit/pull/1056)! Special thanks to the VLMEvalKit team.
 - **[2025.02.01]** 🥳 ChartMimic is accepted by ICLR 2025.
 - **[2024.06.13]** 📣 ChartMimic is released.
