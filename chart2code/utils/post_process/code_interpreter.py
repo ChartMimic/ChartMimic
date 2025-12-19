@@ -74,7 +74,7 @@ def _muti_process_run(rank, data):
         code = (
             "try:\n    "
             + code.strip()
-            + '\nexcept Exception as e:\n    pass\nplt.savefig("{}")'.format(
+            + '\nexcept Exception as e:\n    pass\nplt.savefig("{}", bbox_inches="tight")'.format(
                 output_file.replace(".py", f".pdf")
             )
         )
