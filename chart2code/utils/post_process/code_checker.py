@@ -77,7 +77,7 @@ def _muti_process_run(rank, data, num_processes):
         code = re.sub(r"plt.show\(.*\n*", "", code, flags=re.S)
         code = (
             code.strip()
-            + '\nplt.savefig("{}")'.format(
+            + '\nplt.savefig("{}", bbox_inches="tight")'.format(
                 output_file.replace(".py", f".pdf")
             )
         )
